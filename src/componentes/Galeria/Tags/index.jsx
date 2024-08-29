@@ -1,18 +1,20 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components';
 import tags from './tags.json'
 
 const TagsContainer = styled.section`
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 64px;
     margin-top: 56px;
 `
-const ParagrafoEstilizado = styled.p`
+
+const TagTitulo = styled.h3`
     color: #D9D9D9;
     font-size: 24px;
     margin: 0;
-`
-const BotaoEstilizado = styled.button`
+`;
+
+const Tag = styled.button`
     font-size: 24px;
     color: #FFFFFF;
     background: rgba(217, 217, 217, 0.3);
@@ -23,21 +25,22 @@ const BotaoEstilizado = styled.button`
     box-sizing: border-box;
     border: 2px solid transparent;
     &:hover {
-    border-color: #C98CF1};
+      border-color: #C98CF1;
+    }
 `
-const DivEstilizado = styled.div`
+
+const Div = styled.div`
     display: flex;
     gap: 24px;
     justify-content: end;
 `
 
 const Tags = () => {
-
     return <TagsContainer>
-        <ParagrafoEstilizado>Busque por tags:</ParagrafoEstilizado>
-        <DivEstilizado>
-            {tags.map(tag => <BotaoEstilizado key={tag.id}>{tag.titulo}</BotaoEstilizado>)}
-        </DivEstilizado>
+        <TagTitulo>Busque por tags:</TagTitulo>
+        <Div>
+            {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+        </Div>
     </TagsContainer>
 }
 

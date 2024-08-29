@@ -9,7 +9,7 @@ const ItemListaEstilizado = styled.li`
     font-family: ${ props => props.$ativo ? 'GandhiSansBold' : 'GandhiSansRegular'};
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 22px;
 `
 
 const ItemNavegacao = ({children, iconeAtivo, iconeInativo, ativo = false}) => {
