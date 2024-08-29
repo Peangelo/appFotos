@@ -10,7 +10,6 @@ const ItemListaEstilizado = styled.li`
     display: flex;
     align-items: center;
     gap: 13px;
-    padding-left: 10px;
 `
 
 const ItemNavegacao = ({children, iconeAtivo, iconeInativo, ativo = false}) => {
